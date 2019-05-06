@@ -113,7 +113,6 @@ public class Ex_15_Titanic_Cross_Validation {
                 regexTokenizer,
                 remover,
                 hashingTF,
-                new TitanicUtils.Printer(),
                 sexIndexer,
                 embarkedIndexer,
                 imputer,
@@ -123,7 +122,6 @@ public class Ex_15_Titanic_Cross_Validation {
                 scaler,
                 normalizer,
                 pca,
-                new TitanicUtils.Printer(),
                 trainer});
 
         MulticlassClassificationEvaluator evaluator = new MulticlassClassificationEvaluator()
@@ -147,7 +145,7 @@ public class Ex_15_Titanic_Cross_Validation {
 
         System.out.println("---------- The best model's parameters are ----------");
         System.out.println("Num of features " + ((HashingTF)((PipelineModel)model.bestModel()).stages()[2]).getNumFeatures());
-        System.out.println("Amount of components in PCA " + ((PCAModel)((PipelineModel)model.bestModel()).stages()[9]).getK());
+        System.out.println("Amount of components in PCA " + ((PCAModel)((PipelineModel)model.bestModel()).stages()[11]).getK());
 
         Dataset<Row> rawPredictions = model.transform(test);
 
