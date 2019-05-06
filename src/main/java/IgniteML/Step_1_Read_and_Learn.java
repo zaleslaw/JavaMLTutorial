@@ -64,7 +64,7 @@ public class Step_1_Read_and_Learn {
 
                 DecisionTreeClassificationTrainer trainer = new DecisionTreeClassificationTrainer(5, 0);
 
-                DecisionTreeNode mdl = trainer.fit(
+ /*               DecisionTreeNode mdl = trainer.fit(
                     ignite,
                     dataCache,
                     featureExtractor, // "pclass", "sibsp", "parch"
@@ -80,10 +80,10 @@ public class Step_1_Read_and_Learn {
                     lbExtractor,
                     new Accuracy<>()
                 );
-
-                System.out.println("\n>>> Accuracy " + accuracy);
+*/
+                /*System.out.println("\n>>> Accuracy " + accuracy);
                 System.out.println("\n>>> Test Error " + (1 - accuracy));
-
+*/
                 System.out.println(">>> Tutorial step 1 (read and learn) example completed.");
             }
             catch (FileNotFoundException e) {
